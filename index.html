@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Personagens</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Cadastro de Personagens</h1>
+        <p>
+            Seja bem vindo ao <mark>The Melody of the Other Side</mark> (A melodia do Outro Lado)
+            <br>
+            Vamos, junte-se a nós e conte-nos mais sobre você.
+        </p>
+    </header>
+    
+    <form id="form-cadastro" action="/cadastro" method="POST">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required><br>
+
+        <label for="origem">Origem:</label>
+        <input type="text" id="origem" name="origem" required><br>
+
+        <label for="classe">Classe:</label>
+        <input type="text" id="classe" name="classe" required><br>
+
+        <label for="nex">NEX:</label>
+        <input type="number" id="nex" name="nex" required><br>
+
+        <label for="patente">Patente:</label>
+        <input type="text" id="patente" name="patente" required><br><br>
+
+        <h3>Atributos (distribua no máximo 5 pontos):</h3>
+        <div class="atributo-container">
+            <span class="atributo-label">Agilidade:</span>
+            <input type="range" id="agilidade" name="agilidade" min="0" max="5" value="0" oninput="atualizarPontos()">
+            <span id="valor-agilidade">0</span>
+        </div>
+        <div class="atributo-container">
+            <span class="atributo-label">Força:</span>
+            <input type="range" id="forca" name="forca" min="0" max="5" value="0" oninput="atualizarPontos()">
+            <span id="valor-forca">0</span>
+        </div>
+        <div class="atributo-container">
+            <span class="atributo-label">Inteligência:</span>
+            <input type="range" id="inteligencia" name="inteligencia" min="0" max="5" value="0" oninput="atualizarPontos()">
+            <span id="valor-inteligencia">0</span>
+        </div>
+        <div class="atributo-container">
+            <span class="atributo-label">Presença:</span>
+            <input type="range" id="presenca" name="presenca" min="0" max="5" value="0" oninput="atualizarPontos()">
+            <span id="valor-presenca">0</span>
+        </div>
+        <div class="atributo-container">
+            <span class="atributo-label">Vigor:</span>
+            <input type="range" id="vigor" name="vigor" min="0" max="5" value="0" oninput="atualizarPontos()">
+            <span id="valor-vigor">0</span>
+        </div>
+        <div>
+            Pontos restantes: <span id="pontos-restantes">5</span>
+        </div>
+        <br>
+        <input type="button" value="Cadastrar" onclick="salvarCadastro()">
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>

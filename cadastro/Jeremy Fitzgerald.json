@@ -1,0 +1,14 @@
+{
+  "nome": "Jeremy Fitzgerald",
+  "origem": "Segurança",
+  "classe": "Especialista",
+  "nex": "5",
+  "patente": "Iniciante",
+  "atributos": {
+    "agilidade": "1",
+    "forca": "1",
+    "inteligencia": "2",
+    "presenca": "1",
+    "vigor": "0"
+  }
+}
